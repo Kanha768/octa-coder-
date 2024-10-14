@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebcc;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            position: absolute;
+            color: #ff4081;
+            font-size: 3.5em;
+            text-align: center;
+            top: 10%;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Balloons */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 80px;
+            height: 100px;
+            border-radius: 50% 50% 50% 50%;
+            background-color: #FF6F61;
+            animation: float 6s ease-in infinite;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+            width: 2px;
+            height: 60px;
+            background-color: #333;
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            background-color: #FF6F61;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+            background-color: #6B5B95;
+        }
+
+        .balloon:nth-child(3) {
+            left: 50%;
+            animation-delay: 2s;
+            background-color: #88B04B;
+        }
+
+        .balloon:nth-child(4) {
+            left: 70%;
+            animation-delay: 3s;
+            background-color: #F7CAC9;
+        }
+
+        .balloon:nth-child(5) {
+            left: 90%;
+            animation-delay: 4s;
+            background-color: #92A8D1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-200px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti:nth-child(6) {
+            left: 15%;
+            animation-delay: 0s;
+            background-color: #FFC107;
+        }
+
+        .confetti:nth-child(7) {
+            left: 25%;
+            animation-delay: 1s;
+            background-color: #8BC34A;
+        }
+
+        .confetti:nth-child(8) {
+            left: 35%;
+            animation-delay: 2s;
+            background-color: #03A9F4;
+        }
+
+        .confetti:nth-child(9) {
+            left: 45%;
+            animation-delay: 0.5s;
+            background-color: #E91E63;
+        }
+
+        .confetti:nth-child(10) {
+            left: 55%;
+            animation-delay: 1.5s;
+            background-color: #FF9800;
+        }
+
+        .confetti:nth-child(11) {
+            left: 65%;
+            animation-delay: 2.5s;
+            background-color: #9C27B0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Cake */
+        .cake {
+            position: absolute;
+            bottom: 50px;
+            width: 250px;
+            height: 150px;
+            background-color: #F48FB1;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cake:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50px;
+            height: 30px;
+            background-color: #F06292;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+
+        .plate {
+            position: absolute;
+            bottom: -10px;
+            width: 300px;
+            height: 20px;
+            background-color: #FFF;
+            border-radius: 50%;
+        }
+
+        .candle {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            width: 10px;
+            height: 30px;
+            background-color: #FFEB3B;
+            transform: translateX(-50%);
+            animation: flicker 0.2s infinite alternate;
+        }
+
+        .candle::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 6px;
+            height: 10px;
+            background-color: orange;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Happy Birthday, [DEBASMITA]! 🎉</h1>
+
+    <!-- Balloons -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <!-- Confetti -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <!-- Cake -->
+    <div class="cake">
+        <div class="candle"></div>
+        <div class="plate"></div>
+    </div>
+
+</body>
+</html>
